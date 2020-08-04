@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './pages/home';
-import {BrowserRouter, Switch, Route, } from 'react-router-dom';
 import CadastroVideo from './pages/cadastro/video';
 import CadastroCategoria from './pages/cadastro/categoria';
+import {BrowserRouter, Switch, Route, } from 'react-router-dom';
 
-const Página404 = () => (<div>Página 404, volte a origem por gentileza.</div>) 
+const Página404 = () => (<div>Página 404</div>) 
 
 
 ReactDOM.render(
