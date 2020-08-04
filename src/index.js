@@ -4,6 +4,7 @@ import './index.css';
 import Home from './pages/home';
 import {BrowserRouter, Switch, Route, } from 'react-router-dom';
 import CadastroVideo from './pages/cadastro/video';
+import CadastroCategoria from './pages/cadastro/categoria';
 
 const Página404 = () => (<div>Página 404, volte a origem por gentileza.</div>) 
 
@@ -12,7 +13,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/cadastro/video" exact component={CadastroVideo} /> 
+      <Route path="/cadastro/video" component={CadastroVideo} /> 
+      <Route path="/cadastro/categoria" component={CadastroCategoria} />
       <Route component={Página404} />
     </Switch>
   </BrowserRouter>,
