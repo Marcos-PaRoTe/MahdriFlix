@@ -19,20 +19,20 @@ export default function CadastroCategoria() {
         })
     }
 
-    function handleChange(InfoEvento) {
-        const { getAttribute, value } = InfoEvento.target;
+    function handleChange(e) {
         setValue(
-        getAttribute('name'),
-        value
-        );
+            e.target.getAttribute('name'),
+            e.target.value
+        )
+        ;
     }
 
     return(
         <PageDefault>
             <h1>Cadastro de Categoria: {values.nome}</h1>
 
-            <form onSubmit={function handleSubmit(InfoEvento) {
-                InfoEvento.preventDefault();                
+            <form onSubmit={function handleSubmit(infosDoEvento) {
+                infosDoEvento.preventDefault();                
                 setCategorias([
                     ...categorias,
                     values
@@ -51,23 +51,11 @@ export default function CadastroCategoria() {
 
                 <FormField
                     label="Descrição"
-                    type="????"
+                    type="textarea"
                     name="descricao"
                     value={values.descricao}
                     onChange={handleChange}
                 />
-
-                {/* <div>
-                    <label>
-                        Descrição:
-                        <textarea
-                            type="text"
-                            value={values.descricao}
-                            name="descricao"
-                            onChange={handleChange}                       
-                        />
-                    </label>
-                </div> */}
 
                 <FormField
                     label="Cor"
@@ -77,18 +65,7 @@ export default function CadastroCategoria() {
                     onChange={handleChange}
                 
                 />
-                {/*<div>
-                    <label>
-                        Cor:
-                        <input 
-                            type="color"
-                            value={values.cor}
-                            name="cor"
-                            onChange={handleChange}                        
-                        />
-                    </label>                    
-                </div> */}
-
+                
                 <button>
                      Cadastrar
                  </button>
