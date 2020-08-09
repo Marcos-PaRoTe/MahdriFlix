@@ -13,13 +13,14 @@ function CadastroCategoria() {
   };
 
   const { handleChange, values, clearForm } = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
     const URL_TOP = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
-      : 'https://mahdriflix.herokuapp.com/categorias';
-
+      : 'https://devsoutinhoflix.herokuapp.com/categorias';
+    // E a ju ama variáveis
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
@@ -61,7 +62,7 @@ function CadastroCategoria() {
           values,
         ]);
 
-        clearForm(valoresIniciais);
+        clearForm();
       }}
       >
 
