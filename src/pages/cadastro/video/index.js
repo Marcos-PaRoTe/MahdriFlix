@@ -12,9 +12,9 @@ function CadastroVideo() {
   const [categorias, setCategorias] = useState([]);
   const categoryTitles = categorias.map(({ titulo }) => titulo);
   const { handleChange, values } = useForm({
-    titulo: '',
-    url: '',
-    categoria: '',
+    titulo: 'The Last Of Us II',
+    url: 'https://www.youtube.com/watch?v=qPNiIeKMHyg',
+    categoria: 'Games',
   });
 
   useEffect(() => {
@@ -31,6 +31,7 @@ function CadastroVideo() {
 
       <form onSubmit={(event) => {
         event.preventDefault();
+
         // eslint-disable-next-line max-len
         const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === values.categoria);
 
@@ -40,7 +41,6 @@ function CadastroVideo() {
           categoriaId: categoriaEscolhida.id,
         })
           .then(() => {
-            // eslint-disable-next-line no-console
             console.log('Cadastrou com sucesso!');
             history.push('/');
           });

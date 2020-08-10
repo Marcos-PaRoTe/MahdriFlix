@@ -10,20 +10,6 @@
       }
     },
     {
-      "id": 5,
-      "titulo": "Games",
-      "cor": "red",
-      "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
-    },
-    {
-      "id": 4,
-      "titulo": "Filmes",
-      "cor": "orange"
-    },
-    {
       "id": 1,
       "titulo": "Front End",
       "cor": "#6BD1FF",
@@ -39,6 +25,24 @@
       "link_extra": {
         "text": "Cursos de Back End na Alura",
         "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Games",
+      "cor": "red",
+      "link_extra": {
+        "text": "Formação de Jogos na Alura",
+        "url": "https://www.alura.com.br/cursos-online-front-end"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Filmes",
+      "cor": "orange",
+      "link_extra": {
+        "text": "Netflix",
+        "url": "https://www.netflix.com/browse"
       }
     },
     {

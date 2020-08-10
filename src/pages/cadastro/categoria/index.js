@@ -20,7 +20,6 @@ function CadastroCategoria() {
     const URL_TOP = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
       : 'https://mahdriflix.herokuapp.com/categorias';
-    // E a ju ama variáveis
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
@@ -95,10 +94,7 @@ function CadastroCategoria() {
       </form>
 
       {categorias.length === 0 && (
-        <div>
-          {/* Cargando... */}
-          Loading...
-        </div>
+        <div> Loading... </div>
       )}
 
       <ul>
